@@ -1,2 +1,2 @@
 # MicrowaveModel
-This is a new information model for microwave
+This repository defines an information model for microwave radio SDN Transport.
