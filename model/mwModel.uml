@@ -10,6 +10,11 @@ not yet modelled propperly.</body>
     <ownedComment xmi:type="uml:Comment" xmi:id="_eboGsHyEEeWzu8zLh1nOCg">
       <body>The consequences of max numbers in StructureGroupPTP seem not to documented properly.</body>
     </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_PxvDIH8LEeWBq7i0OIsX7g">
+      <body>Just an issustration of the ProtectionGroup - in ONF Common Model (TR 512)it will be presented as LTP and FC.
+- to be confimrd by Nigel Davis
+- see https://www.opennetworking.org/images/stories/downloads/sdn-resources/technical-reports/CoreInformationModel.V1.0.zip / SupportingDocuments/onf.2014.415_Spec_model...pdf</body>
+    </ownedComment>
     <packagedElement xmi:type="uml:Class" xmi:id="_ulaS8Hk9EeW1-cr9O9dzWA" name="MwDevice">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_BvWYQHk-EeW1-cr9O9dzWA" name="mwslot" type="_9N4_QHk9EeW1-cr9O9dzWA" aggregation="composite" association="_BvSt4Hk-EeW1-cr9O9dzWA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YAyaAHk-EeW1-cr9O9dzWA" value="1"/>
@@ -1774,6 +1779,30 @@ These capabilities might include bundling or protection of segments.</body>
       <ownedEnd xmi:type="uml:Property" xmi:id="_vbZ28H1HEeWHjMaYlqnBcw" name="containerttp" type="_ZZ_DoH1GEeWHjMaYlqnBcw" association="_vbXasH1HEeWHjMaYlqnBcw"/>
       <ownedEnd xmi:type="uml:Property" xmi:id="_vbYBwn1HEeWHjMaYlqnBcw" name="containeral" type="_huv5sH1HEeWHjMaYlqnBcw" association="_vbXasH1HEeWHjMaYlqnBcw"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_JjIoUH8KEeWBq7i0OIsX7g" name="ProtectionGroup">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_f4C00n8KEeWBq7i0OIsX7g" name="protectedCTP" visibility="private" type="_M5pRIH8KEeWBq7i0OIsX7g" association="_f4CNwH8KEeWBq7i0OIsX7g"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ogsFon8KEeWBq7i0OIsX7g" name="workingCTP" visibility="private" type="_M5pRIH8KEeWBq7i0OIsX7g" association="_ogrekH8KEeWBq7i0OIsX7g"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6IebsX8KEeWBq7i0OIsX7g" name="protectingCTP" visibility="private" type="_M5pRIH8KEeWBq7i0OIsX7g" association="_6IdNkH8KEeWBq7i0OIsX7g"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_M5pRIH8KEeWBq7i0OIsX7g" name="&lt;Layer>CTP"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_f4CNwH8KEeWBq7i0OIsX7g" memberEnd="_f4C00n8KEeWBq7i0OIsX7g _f4ObAH8KEeWBq7i0OIsX7g">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_f4C00H8KEeWBq7i0OIsX7g" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_f4C00X8KEeWBq7i0OIsX7g" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_f4ObAH8KEeWBq7i0OIsX7g" name="protectiongroup" type="_JjIoUH8KEeWBq7i0OIsX7g" association="_f4CNwH8KEeWBq7i0OIsX7g"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ogrekH8KEeWBq7i0OIsX7g" memberEnd="_ogsFon8KEeWBq7i0OIsX7g _ogt60H8KEeWBq7i0OIsX7g">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ogsFoH8KEeWBq7i0OIsX7g" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ogsFoX8KEeWBq7i0OIsX7g" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ogt60H8KEeWBq7i0OIsX7g" name="protectiongroup" type="_JjIoUH8KEeWBq7i0OIsX7g" association="_ogrekH8KEeWBq7i0OIsX7g"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_6IdNkH8KEeWBq7i0OIsX7g" memberEnd="_6IebsX8KEeWBq7i0OIsX7g _6IfCwH8KEeWBq7i0OIsX7g">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6Id0oH8KEeWBq7i0OIsX7g" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6IebsH8KEeWBq7i0OIsX7g" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_6IfCwH8KEeWBq7i0OIsX7g" name="protectiongroup" type="_JjIoUH8KEeWBq7i0OIsX7g" association="_6IdNkH8KEeWBq7i0OIsX7g"/>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_IE9PwHfbEeWiOPc9pTMjTg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IG6-oHfbEeWiOPc9pTMjTg" source="PapyrusVersion">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_IG6-oXfbEeWiOPc9pTMjTg" key="Version" value="0.0.2"/>
@@ -2092,4 +2121,12 @@ These capabilities might include bundling or protection of segments.</body>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_6j2gIX1JEeWHjMaYlqnBcw" base_StructuralFeature="_6j2gIH1JEeWHjMaYlqnBcw"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_6-iRAX1JEeWHjMaYlqnBcw" base_StructuralFeature="_6-iRAH1JEeWHjMaYlqnBcw"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_7YoMAX1JEeWHjMaYlqnBcw" base_StructuralFeature="_7YoMAH1JEeWHjMaYlqnBcw"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_Jlk4UH8KEeWBq7i0OIsX7g" base_Class="_JjIoUH8KEeWBq7i0OIsX7g"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_M5pRIX8KEeWBq7i0OIsX7g" base_Class="_M5pRIH8KEeWBq7i0OIsX7g"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_f4C0038KEeWBq7i0OIsX7g" base_StructuralFeature="_f4C00n8KEeWBq7i0OIsX7g"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_f4ObAX8KEeWBq7i0OIsX7g" base_StructuralFeature="_f4ObAH8KEeWBq7i0OIsX7g"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_ogsFo38KEeWBq7i0OIsX7g" base_StructuralFeature="_ogsFon8KEeWBq7i0OIsX7g"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_oguh4H8KEeWBq7i0OIsX7g" base_StructuralFeature="_ogt60H8KEeWBq7i0OIsX7g"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_6Iebsn8KEeWBq7i0OIsX7g" base_StructuralFeature="_6IebsX8KEeWBq7i0OIsX7g"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_6Ifp0H8KEeWBq7i0OIsX7g" base_StructuralFeature="_6IfCwH8KEeWBq7i0OIsX7g"/>
 </xmi:XMI>
